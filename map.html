@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <link href="index.css" rel="stylesheet" type="text/css" />
+    <link href="menu.css" rel="stylesheet" type="text/css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,10 +12,40 @@
     <h1 class="headin">Google Map</h1>
     <ul class="breadcrumb" style="background-color: white">
       <li><a href="index.html">Home</a></li>
-      <li><a href="images-album.html">Images</a></li>
       <li><a href="films.html">Films</a></li>
+      <li><a href="images-album.html">Images</a></li>
       <li><a href="contact-form.html">Contact Form</a></li>
       <li><a href="map.html">Map</a></li>
+      <li>
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Menu</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="index.html">Home</a>
+            <a href="#about">About</a>
+            <a href="contact-form.html">Contact</a>
+          </div>
+        </div>
+
+        <script>
+          function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+          }
+
+          window.onclick = function (event) {
+            if (!event.target.matches(".dropbtn")) {
+              var dropdowns =
+                document.getElementsByClassName("dropdown-content");
+              var i;
+              for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains("show")) {
+                  openDropdown.classList.remove("show");
+                }
+              }
+            }
+          };
+        </script>
+      </li>
     </ul>
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.2416745862574!2d30.32734517045118!3d40.741777172128835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ccaded70ee240b%3A0xd81085b5551312fd!2sBilgisayar%20Ve%20Bili%C5%9Fim%20Bilimleri%20Fak%C3%BCltesi!5e0!3m2!1str!2str!4v1672309579570!5m2!1str!2str"

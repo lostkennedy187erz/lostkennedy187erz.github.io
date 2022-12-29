@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <link href="index.css" rel="stylesheet" type="text/css" />
+    <link href="menu.css" rel="stylesheet" type="text/css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,10 +12,40 @@
     <h1 class="headin">Films</h1>
     <ul class="breadcrumb" style="background-color: cadetblue">
       <li><a href="index.html">Home</a></li>
-      <li><a href="images-album.html">Images</a></li>
       <li><a href="films.html">Films</a></li>
+      <li><a href="images-album.html">Images</a></li>
       <li><a href="contact-form.html">Contact Form</a></li>
       <li><a href="map.html">Map</a></li>
+      <li>
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Menu</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="index.html">Home</a>
+            <a href="#about">About</a>
+            <a href="contact-form.html">Contact</a>
+          </div>
+        </div>
+
+        <script>
+          function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+          }
+
+          window.onclick = function (event) {
+            if (!event.target.matches(".dropbtn")) {
+              var dropdowns =
+                document.getElementsByClassName("dropdown-content");
+              var i;
+              for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains("show")) {
+                  openDropdown.classList.remove("show");
+                }
+              }
+            }
+          };
+        </script>
+      </li>
     </ul>
     <h1 align="center">Actors and Their Films</h1>
     <table border="1px" cellpadding="10" align="center">
