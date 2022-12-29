@@ -2,6 +2,7 @@
   text-align: center;
   font-family: fantasy;
   font-size: 80px;
+  color: black;
 }
 .gallery {
   margin: 35px;
@@ -40,6 +41,6 @@ ul.breadcrumb li a {
   text-decoration: none;
 }
 ul.breadcrumb li a:hover {
-  color: #01447e;
+  color: black;
   text-decoration: underline;
 }
