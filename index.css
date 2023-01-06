@@ -6,12 +6,12 @@
 }
 .gallery {
   margin: 35px;
-  border: 1px solid #ccc;
+  border: 1px solid black;
   float: left;
   width: 220px;
 }
 .gallery:hover {
-  border: 1px solid #777;
+  border: 1px solid blue;
 }
 .gallery img {
   width: 220px;
@@ -24,7 +24,7 @@
 ul.breadcrumb {
   padding: 10px 16px;
   list-style: none;
-  background-color: cadetblue;
+  background-color: transparent;
 }
 ul.breadcrumb li {
   display: inline;
@@ -33,14 +33,17 @@ ul.breadcrumb li {
 ul.breadcrumb li + li:before {
   padding: 8px;
   margin: 5px;
-  color: black;
+  color: white;
   content: "/\00a0";
 }
 ul.breadcrumb li a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 ul.breadcrumb li a:hover {
   color: black;
   text-decoration: underline;
+}
+body {
+  background-size: cover;
 }
