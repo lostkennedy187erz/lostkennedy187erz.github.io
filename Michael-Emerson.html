@@ -16,36 +16,6 @@
       <li><a href="images-album.html">Images</a></li>
       <li><a href="contact-form.html">Contact Form</a></li>
       <li><a href="map.html">Map</a></li>
-      <li>
-        <div class="dropdown">
-          <button onclick="myFunction()" class="dropbtn">Menu</button>
-          <div id="myDropdown" class="dropdown-content">
-            <a href="index.html">Home</a>
-            <a href="#about">About</a>
-            <a href="contact-form.html">Contact</a>
-          </div>
-        </div>
-
-        <script>
-          function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-          }
-
-          window.onclick = function (event) {
-            if (!event.target.matches(".dropbtn")) {
-              var dropdowns =
-                document.getElementsByClassName("dropdown-content");
-              var i;
-              for (i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains("show")) {
-                  openDropdown.classList.remove("show");
-                }
-              }
-            }
-          };
-        </script>
-      </li>
     </ul>
     <table>
       <tr>
